@@ -1,2 +1,2 @@
 #!/bin/bash
-yes | bash -c "$(wget -qO- "https://raw.githubusercontent.com/revgen/myenv/master/install-myenv.sh")"
+yes | ENV_LOGO=disabled bash -c "$(wget -qO- "https://raw.githubusercontent.com/revgen/myenv/master/install-myenv.sh")"
