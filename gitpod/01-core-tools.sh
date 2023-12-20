@@ -19,3 +19,8 @@ install_awscli &
 install_tool tig
 install_tool mc
 install_tool shellcheck
+
+(
+    pip install ruff
+    pip install python-dotenv
+) &
