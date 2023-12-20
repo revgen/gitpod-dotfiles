@@ -18,7 +18,9 @@ install_awscli() {
 install_awscli &
 install_tool tig
 install_tool mc
+install_tool bat
 install_tool shellcheck
+install_tool vd visidata
 
 (
     pip install ruff
