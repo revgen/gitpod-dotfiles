@@ -1,6 +1,6 @@
 # Gitpod.io - dotfiles
 
-Repository contains dotfiles for [Gitpod.io](https://gitpod.io) service.
+Repository contains dotfiles for [Gitpod.io](https://gitpod.io) cloud development environment.
 
 ## Documentation
 

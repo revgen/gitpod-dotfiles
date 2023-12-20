@@ -1,4 +1,10 @@
 #!/bin/bash
+# ----------------------------------------------------------------------------
+install_tool() {
+    command="${1}"
+    package="${2:-"${command}"}"
+    if ! command -v "${command}" &> /dev/null; then sudo apt install -y "${package}"; fi
+}
 install_awscli() {
     if command -v aws &> /dev/null; then return 0; fi
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -8,10 +14,8 @@ install_awscli() {
     rm -rf ./aws
 }
 
-install_core_cli_tools() {
-    if ! command -v mc &> /dev/null; then sudo apt install -y tig; fi
-    if ! command -v mc &> /dev/null; then sudo apt install -y mc; fi
-}
-
+# ----------------------------------------------------------------------------
 install_awscli &
-install_core_cli_tools &
+install_tool tig
+install_tool mc
+install_tool shellcheck
